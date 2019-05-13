@@ -1,31 +1,31 @@
 {
-  "manifest": {
-    "publishingInformation": {
-      "locales": {
-        "en-US": {
-          "summary": "Sample Short Description",
-          "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
-          ],
-          "name": "Alexa Twitter",
-          "description": "Sample Full Description"
-        }
-      },
-      "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": []
-    },
-    "apis": {
-      "custom": {
-        "endpoint": {
-          "sourceDir": "lambda/custom",
-          "uri": "ask-custom-Alexa_Twitter-default"
-        }
-      }
-    },
-    "manifestVersion": "1.0"
-  }
+    "manifest": {
+        "publishingInformation": {
+            "locales": {
+                "en-US": {
+                    "summary": "Use Twitter® with your voice",
+                    "examplePhrases": [
+                        "Alexa, open Birder",
+                        "Alexa, launch Birder",
+                        "Alexa, start Birder"
+                    ],
+                    "name": "Birder",
+                    "description": "Sample Full Description"
+                }
+            },
+            "isAvailableWorldwide": true,
+            "testingInstructions": "Sample Testing Instructions.",
+            "category": "SOCIAL_NETWORKING",
+            "distributionCountries": []
+        },
+        "apis": {
+            "custom": {
+                "endpoint": {
+                    "sourceDir": "lambda/custom",
+                    "uri": "ask-custom-Alexa_Twitter-default"
+                }
+            }
+        },
+        "manifestVersion": "1.0"
+    }
 }
