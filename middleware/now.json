@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "name": "TwitterOAuthMiddleware",
+    "env": {
+        "SESS_SECRET": "@session-secret",
+        "CONSUMER_KEY": "@consumer-key",
+        "CONSUMER_SECRET": "@consumer-secret",
+        "CALLBACK_URL": "@callback-uri"
+    },
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@now/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "index.js"
+        }
+    ]
+}

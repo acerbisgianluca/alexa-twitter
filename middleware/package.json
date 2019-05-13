@@ -1,0 +1,16 @@
+{
+    "name": "twitter-middleware",
+    "version": "1.0.0",
+    "description": "Twitter OAuth Middleware for Alexa Account Linking",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Acerbis Gianluca",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.15.3",
+        "express-session": "^1.15.3",
+        "node-twitter-api": "^1.8.0"
+    }
+}
