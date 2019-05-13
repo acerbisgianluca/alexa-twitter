@@ -1,0 +1,11 @@
+# NPM packages folder
+node_modules
+
+# Environment variables file
+.env
+
+# Alexa Skill Kit config folder
+.ask
+
+# Hooks folder
+hooks
