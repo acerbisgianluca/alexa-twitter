@@ -30,7 +30,7 @@
     "errors": {
         "noAuth": "You didn't linked your Twitter account to Alexa. Please open your Alexa App to set it up.",
         "miscellaneous": {
-            "v1": ""
+            "v1": "Ops, there has been a problem with your request. Retry!"
         }
     }
 }

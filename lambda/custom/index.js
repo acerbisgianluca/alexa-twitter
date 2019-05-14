@@ -107,7 +107,7 @@ const SessionEndedRequestHandler = {
         );
     },
     handle(handlerInput) {
-        return handlerInput.responseBuilder.getResponse();
+        return handlerInput.jrb.getResponse();
     },
 };
 
