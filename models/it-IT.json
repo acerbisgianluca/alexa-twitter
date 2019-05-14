@@ -1,0 +1,96 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "birder",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PostTweetIntent",
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "pubblica {text}",
+                                "invia {text}",
+                                "posta {text}",
+                                "{text}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "pubblica {text}",
+                        "invia {text}",
+                        "posta {text}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PostTweetIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "text",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.904082647228.343239949849",
+                                "elicitation": "Elicit.Slot.904082647228.343239949849"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.904082647228.343239949849",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Cosa vuoi pubblicare?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Cosa ti piacerebbe pubblicare?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.904082647228.343239949849",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Dovrei pubblicare {text} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Va bene {text}?"
+                    }
+                ]
+            }
+        ]
+    }
+}

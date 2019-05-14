@@ -1,22 +1,54 @@
 {
     "manifest": {
+        "manifestVersion": "1.0",
         "publishingInformation": {
             "locales": {
                 "en-US": {
+                    "name": "Birder",
                     "summary": "Use Twitter® with your voice",
+                    "description": "Sample Full Description",
+                    "keywords": ["twitter", "tweet", "social", "network"],
                     "examplePhrases": [
                         "Alexa, open Birder",
-                        "Alexa, launch Birder",
-                        "Alexa, start Birder"
+                        "Post Hello from my Echo"
                     ],
+                    "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c475/28dd040e3f874be38a215da7c29eb6f4/APP_ICON?versionId=ceWsD687._cENr1SRKDXTn8MM3cWidOq&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d28c45a05a82ee22b2677f10c233054d904164086e4fd7531a48e237997742b3",
+                    "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4846/463365ed48a7489c80599b6ca5905981/APP_ICON_LARGE?versionId=3.Zd.tZZHooVPMRqDK5M6Vcesxd.Wwke&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a4ac5f647011f14347968d8e8d8bae5b411feff2b981a4e50d0340e814e8ca51"
+                },
+                "it-IT": {
                     "name": "Birder",
-                    "description": "Sample Full Description"
+                    "summary": "Usa Twitter® con la tua voce",
+                    "description": "Sample Full Description",
+                    "keywords": ["twitter", "tweet", "social", "network"],
+                    "examplePhrases": [
+                        "Alexa, apri Birder",
+                        "Pubblica Ciao dal mio Echo"
+                    ],
+                    "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c475/28dd040e3f874be38a215da7c29eb6f4/APP_ICON?versionId=ceWsD687._cENr1SRKDXTn8MM3cWidOq&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d28c45a05a82ee22b2677f10c233054d904164086e4fd7531a48e237997742b3",
+                    "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4846/463365ed48a7489c80599b6ca5905981/APP_ICON_LARGE?versionId=3.Zd.tZZHooVPMRqDK5M6Vcesxd.Wwke&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a4ac5f647011f14347968d8e8d8bae5b411feff2b981a4e50d0340e814e8ca51"
                 }
             },
             "isAvailableWorldwide": true,
-            "testingInstructions": "Sample Testing Instructions.",
+            "testingInstructions": "First of all you need to link your Twitter account. Then you can use \"alexa, launch birder\" and \"post {text of the tweet}\" to publish a new tweet.",
             "category": "SOCIAL_NETWORKING",
             "distributionCountries": []
+        },
+        "privacyAndCompliance": {
+            "locales": {
+                "en-US": {
+                    "privacyPolicyUrl": "https://github.com/acerbisgianluca/alexa-twitter/blob/master/PRIVACY.md",
+                    "termsOfUseUrl": "https://github.com/acerbisgianluca/alexa-twitter/blob/master/TermOfUse.md"
+                },
+                "it-IT": {
+                    "privacyPolicyUrl": "https://github.com/acerbisgianluca/alexa-twitter/blob/master/PRIVACY.md",
+                    "termsOfUseUrl": "https://github.com/acerbisgianluca/alexa-twitter/blob/master/TermOfUse.md"
+                }
+            },
+            "allowsPurchases": false,
+            "usesPersonalInfo": false,
+            "isChildDirected": false,
+            "isExportCompliant": true,
+            "containsAds": false
         },
         "apis": {
             "custom": {
@@ -25,7 +57,6 @@
                     "uri": "ask-custom-Alexa_Twitter-default"
                 }
             }
-        },
-        "manifestVersion": "1.0"
+        }
     }
 }
