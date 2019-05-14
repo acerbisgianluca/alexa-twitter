@@ -1,0 +1,36 @@
+{
+    "welcome": {
+        "success": "Hi, I'm your Twitter Assistant!",
+        "card": {
+            "content": "Use Twitter with your voice. Powered by Alexa."
+        }
+    },
+    "postTweet": {
+        "success": "Your tweet has been posted!",
+        "error": "Now I can't post your tweet. Please try again later.",
+        "card": {
+            "content": "Post a new Tweet."
+        }
+    },
+    "help": {
+        "message": "If you want to post a tweet, you can say <break strength='medium'/> post <break strength='weak'/> and what you would like to publish. You can find the Notice of Non-Affiliation and Disclaimer in the Skill description.",
+        "card": {
+            "content": "How to use Twitter For Alexa."
+        }
+    },
+    "stop": {
+        "message": "Thanks for using Twitter For Alexa, see you next time!",
+        "card": {
+            "content": "Thanks for using Twitter For Alexa."
+        }
+    },
+    "card": {
+        "title": "Twitter For Alexa"
+    },
+    "errors": {
+        "noAuth": "You didn't linked your Twitter account to Alexa. Please open your Alexa App to set it up.",
+        "miscellaneous": {
+            "v1": ""
+        }
+    }
+}
