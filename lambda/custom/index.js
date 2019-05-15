@@ -31,7 +31,6 @@ const LaunchRequestHandler = {
 
 const PostTweetIntentHandler = {
     canHandle(handlerInput) {
-        console.log(handlerInput.requestEnvelope.request);
         return (
             handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
             handlerInput.requestEnvelope.request.intent.name ===
@@ -58,6 +57,35 @@ const PostTweetIntentHandler = {
         return handlerInput.jrb
             .speak(speechText)
             .withSimpleCard(ri('card.title'), ri('postTweet.card.content'))
+            .getResponse();
+    },
+};
+
+const GetTrendsIntentHandler = {
+    canHandle(handlerInput) {
+        return (
+            handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+            handlerInput.requestEnvelope.request.intent.name ===
+                'GetTrendsIntent'
+        );
+    },
+    async handle(handlerInput) {
+        let tokens =
+            handlerInput.requestEnvelope.context.System.user.accessToken;
+        if (!tokens) {
+            const speechText = ri('errors.noAuth');
+
+            return handlerInput.jrb
+                .speak(speechText)
+                .withLinkAccountCard()
+                .getResponse();
+        }
+
+        const speechText = await utils.getTrends(tokens.split(','));
+
+        return handlerInput.jrb
+            .speak(speechText)
+            .withSimpleCard(ri('card.title'), ri('getTrends.card.content'))
             .getResponse();
     },
 };
@@ -135,6 +163,7 @@ exports.handler = skillBuilder
     .addRequestHandlers(
         LaunchRequestHandler,
         PostTweetIntentHandler,
+        GetTrendsIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler
