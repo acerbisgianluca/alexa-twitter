@@ -1,16 +1,39 @@
 {
     "name": "twitter-middleware",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Twitter OAuth Middleware for Alexa Account Linking",
+    "keywords": [
+        "Twitter",
+        "Alexa"
+    ],
+    "homepage": "https://github.com/acerbisgianluca/alexa-twitter",
+    "bugs": {
+        "url": "https://github.com/acerbisgianluca/alexa-twitter/issues"
+    },
+    "repository": "github:acerbisgianluca/alexa-twitter",
     "main": "index.js",
     "scripts": {
+        "lint": "./node_modules/.bin/eslint --fix *.js",
+        "deploy": "now",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Acerbis Gianluca",
+    "author": {
+        "name": "Acerbis Gianluca",
+        "url": "https://www.acerbisgianluca.com/"
+    },
     "license": "MIT",
     "dependencies": {
         "express": "^4.15.3",
         "express-session": "^1.15.3",
         "node-twitter-api": "^1.8.0"
+    },
+    "devDependencies": {
+        "eslint": "^5.16.0",
+        "husky": "^2.2.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint"
+        }
     }
 }
