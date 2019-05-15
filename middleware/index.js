@@ -28,7 +28,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/oauth/request_token', (req, res) => {
-    console.log(CONSUMER_KEY, CONSUMER_SECRET, CALLBACK_URL);
     const session = req.session;
     session.clientId = req.query.client_id;
     session.state = req.query.state;
@@ -36,7 +35,8 @@ app.get('/oauth/request_token', (req, res) => {
 
     twitter.getRequestToken((error, oauthToken, oauthTokenSecret) => {
         if (error) {
-            console.log('Error getting OAuth request token: ', error);
+            console.log('Error getting OAuth request token:', error);
+            res.status(400).end();
         } else {
             session.oauthTokenSecret = oauthTokenSecret;
             res.redirect(
@@ -58,20 +58,19 @@ app.get('/oauth/callback', (req, res) => {
         (error, accessToken, accessTokenSecret) => {
             const session = req.session;
             if (error) {
-                console.log(error);
+                console.log('Error getting Access Token:', error);
+                res.send(400).end();
             } else {
                 const params = {};
                 twitter.verifyCredentials(
                     accessToken,
                     accessTokenSecret,
                     params,
-                    (error, data) => {
+                    (error) => {
                         if (error) {
                             console.log('Error while verifying.');
-                            res.send('Error while verifying.');
+                            res.status(500).end();
                         } else {
-                            console.log('Success; name:' + data['screen_name']);
-
                             var redirect_alexa =
                                 decodeURI(session.redirect_uri) +
                                 '#access_token=' +
