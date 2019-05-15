@@ -1,15 +1,22 @@
 {
     "welcome": {
-        "success": "Hi, I'm your Twitter Assistant!",
+        "success": "Hi, I'm Birder, your Twitter Assistant which allows you to publish new tweets and to browse global trends.",
         "card": {
             "content": "Use Twitter with your voice. Powered by Alexa."
         }
     },
     "postTweet": {
         "success": "Your tweet has been posted!",
-        "error": "Now I can't post your tweet. Please try again later.",
+        "error": "Now I can't post your tweet. Please, try again later.",
         "card": {
             "content": "Post a new Tweet."
+        }
+    },
+    "getTrends": {
+        "success": "Top 5 global trends are {trendsList}",
+        "error": "Now I can't retrieve World trends. Please, try again later.",
+        "card": {
+            "content": "Get top 5 World trends."
         }
     },
     "help": {

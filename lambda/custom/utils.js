@@ -30,6 +30,31 @@ const postTweet = async (text, [accessToken, accessTokenSecret]) => {
         });
 };
 
+const getTrends = async ([accessToken, accessTokenSecret]) => {
+    const client = login(accessToken, accessTokenSecret);
+
+    const params = {
+        id: 1,
+    };
+    return client
+        .get('trends/place', params)
+        .then((results) => {
+            const { trends } = results[0];
+            const trendsList = trends
+                .slice(0, 5)
+                .map((trend) => {
+                    return trend.name;
+                })
+                .join(', ');
+
+            return ri('getTrends.success', { trendsList: trendsList });
+        })
+        .catch(() => {
+            ri('getTrends.error');
+        });
+};
+
 module.exports = {
     postTweet,
+    getTrends,
 };

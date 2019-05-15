@@ -1,6 +1,6 @@
 {
     "welcome": {
-        "success": "Ciao, io sono il tuo assistente Twitter!",
+        "success": "Ciao, io sono <lang xml:lang=\"en-US\">Birder</lang>, il tuo assistente Twitter che ti permette di pubblicare nuovi tweet e di navigare fra i trend globali.",
         "card": {
             "content": "Usa Twitter con la tua voce. Powered by Alexa."
         }
@@ -10,6 +10,13 @@
         "error": "Ora non posso postare il tuo tweet. Per piacere, riprova tra poco.",
         "card": {
             "content": "Pubblica un nuovo tweet."
+        }
+    },
+    "getTrends": {
+        "success": "I primi 5 trends globali sono {trendsList}",
+        "error": "Ora non posso recuperare i trends mondiali. Per piacere, riprova tra poco.",
+        "card": {
+            "content": "Ottieni i primi 5 trends mondiali."
         }
     },
     "help": {

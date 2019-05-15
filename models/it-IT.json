@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "birder",
+            "invocationName": "assistente birder",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -34,6 +34,10 @@
                         "invia {text}",
                         "posta {text}"
                     ]
+                },
+                {
+                    "name": "GetTrendsIntent",
+                    "samples": ["quali sono i trends globali", "trends"]
                 },
                 {
                     "name": "AMAZON.NavigateHomeIntent",
