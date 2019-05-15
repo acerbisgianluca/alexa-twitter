@@ -5,24 +5,26 @@
             "locales": {
                 "en-US": {
                     "name": "Birder",
-                    "summary": "Use Twitter® with your voice",
-                    "description": "Sample Full Description",
+                    "summary": "Use Twitter® with your voice.",
+                    "description": "Birder is the first Alexa Skill which allows you to manage your Twitter account using Alexa. You can post new tweets and browse global trends.\nBirder is NOT affiliated with Twitter in any way!",
                     "keywords": ["twitter", "tweet", "social", "network"],
                     "examplePhrases": [
-                        "Alexa, open Birder",
-                        "Post Hello from my Echo"
+                        "Alexa, open Birder Assistant",
+                        "Post Hello from my Echo",
+                        "What are global trends?"
                     ],
                     "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c475/28dd040e3f874be38a215da7c29eb6f4/APP_ICON?versionId=ceWsD687._cENr1SRKDXTn8MM3cWidOq&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d28c45a05a82ee22b2677f10c233054d904164086e4fd7531a48e237997742b3",
                     "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4846/463365ed48a7489c80599b6ca5905981/APP_ICON_LARGE?versionId=3.Zd.tZZHooVPMRqDK5M6Vcesxd.Wwke&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a4ac5f647011f14347968d8e8d8bae5b411feff2b981a4e50d0340e814e8ca51"
                 },
                 "it-IT": {
                     "name": "Birder",
-                    "summary": "Usa Twitter® con la tua voce",
-                    "description": "Sample Full Description",
+                    "summary": "Usa Twitter® con la tua voce.",
+                    "description": "Birder è la prima Skill che ti permette di gestire il tuo account Twitter utilizzando Alexa. Con essa puoi pubblicare nuovi tweets e navigare fra i primi 5 trends globali.\nBirder NON è affiliata in alcun modo con Twitter!",
                     "keywords": ["twitter", "tweet", "social", "network"],
                     "examplePhrases": [
-                        "Alexa, apri Birder",
-                        "Pubblica Ciao dal mio Echo"
+                        "Alexa, apri Assistente Birder",
+                        "Pubblica Ciao dal mio Echo",
+                        "Quali sono i trends globali?"
                     ],
                     "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c475/28dd040e3f874be38a215da7c29eb6f4/APP_ICON?versionId=ceWsD687._cENr1SRKDXTn8MM3cWidOq&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d28c45a05a82ee22b2677f10c233054d904164086e4fd7531a48e237997742b3",
                     "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4846/463365ed48a7489c80599b6ca5905981/APP_ICON_LARGE?versionId=3.Zd.tZZHooVPMRqDK5M6Vcesxd.Wwke&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190513T200025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a4ac5f647011f14347968d8e8d8bae5b411feff2b981a4e50d0340e814e8ca51"
