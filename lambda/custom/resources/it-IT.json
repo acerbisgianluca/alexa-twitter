@@ -1,6 +1,6 @@
 {
     "welcome": {
-        "success": "Ciao, io sono <lang xml:lang=\"en-US\">Birder</lang>, il tuo assistente Twitter che ti permette di pubblicare nuovi tweet e di navigare fra i trend globali.",
+        "success": "Ciao, io sono <lang xml:lang=\"en-US\">Birder</lang>, il tuo assistente Twitter che ti permette di pubblicare nuovi tweet e di navigare fra i trend globali. Cosa ti piacerebbe fare?",
         "card": {
             "content": "Usa Twitter con la tua voce. Powered by Alexa."
         }
@@ -20,7 +20,7 @@
         }
     },
     "help": {
-        "message": "Se vuoi postare un nuovo tweet, puoi dire <break strength='medium'/> posta <break strength='weak'/> e cosa vuoi postare. Puoi trovare l'avviso di non affiliazione e il disclaimer nella descrizione della Skill.",
+        "message": "Se vuoi postare un nuovo tweet, puoi dire <break strength='medium'/> posta <break strength='weak'/> e cosa vuoi postare. Se vuoi navigare tra i trend globali, chiedi <break strength='medium'/> quali sono i trends globali? Quindi, cosa ti piacerebbe fare?",
         "card": {
             "content": "Come usare Twitter per Alexa."
         }

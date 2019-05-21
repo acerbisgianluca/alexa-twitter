@@ -103,6 +103,7 @@ const HelpIntentHandler = {
 
         return handlerInput.jrb
             .speak(speechText)
+            .reprompt(speechText)
             .withSimpleCard(ri('card.title'), ri('help.card.content'))
             .getResponse();
     },

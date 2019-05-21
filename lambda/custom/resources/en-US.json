@@ -1,6 +1,6 @@
 {
     "welcome": {
-        "success": "Hi, I'm Birder, your Twitter Assistant which allows you to publish new tweets and to browse global trends.",
+        "success": "Hi, I'm Birder, your Twitter Assistant which allows you to publish new tweets and to browse global trends. What would you like to do?",
         "card": {
             "content": "Use Twitter with your voice. Powered by Alexa."
         }
@@ -20,7 +20,7 @@
         }
     },
     "help": {
-        "message": "If you want to post a tweet, you can say <break strength='medium'/> post <break strength='weak'/> and what you would like to publish. You can find the Notice of Non-Affiliation and Disclaimer in the Skill description.",
+        "message": "If you want to post a tweet, you can say <break strength='medium'/> post <break strength='weak'/> and what you would like to publish. If you want to browse global trends, you can ask <break strength='medium'/> what are global trends? So, what would you like to do?",
         "card": {
             "content": "How to use Twitter For Alexa."
         }
