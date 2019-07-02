@@ -19,6 +19,14 @@
             "content": "Ottieni i primi 5 trends mondiali."
         }
     },
+    "getTimeline": {
+        "success": "{count, plural, =0 {Non hai nuovi tweet} =1 {Ecco un tweet} other {Ecco # tweet}} <break strength='medium'/> {tweetList}",
+        "tweet": "{text} <break strength='medium'/> pubblicato da {user}",
+        "error": "Ora non posso recuperare la tua <lang xml:lang=\"en-US\">timeline</lang>. Per piacere, riprova tra poco.",
+        "card": {
+            "content": "Ottieni la tua timeline."
+        }
+    },
     "help": {
         "message": "Se vuoi postare un nuovo tweet, puoi dire <break strength='medium'/> posta <break strength='weak'/> e cosa vuoi postare. Se vuoi navigare tra i trend globali, chiedi <break strength='medium'/> quali sono i trends globali? Quindi, cosa ti piacerebbe fare?",
         "card": {

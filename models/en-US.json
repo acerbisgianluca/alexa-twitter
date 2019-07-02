@@ -36,6 +36,26 @@
                     "samples": ["what are global trends", "trends"]
                 },
                 {
+                    "name": "GetTimelineIntent",
+                    "slots": [
+                        {
+                            "name": "count",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "read {count} tweets",
+                                "the last {count} tweets",
+                                "tell me {count} tweets",
+                                "{count}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "read the last {count} tweets",
+                        "tell me {count} tweets",
+                        "what are my last {count} tweets"
+                    ]
+                },
+                {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 }
@@ -55,8 +75,24 @@
                             "confirmationRequired": true,
                             "elicitationRequired": true,
                             "prompts": {
-                                "confirmation": "Confirm.Slot.904082647228.343239949849",
-                                "elicitation": "Elicit.Slot.904082647228.343239949849"
+                                "confirmation": "PostTweetConfirmSlot",
+                                "elicitation": "PostTweetElicitSlot"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "GetTimelineIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "count",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "GetTimelineElicitSlot"
                             }
                         }
                     ]
@@ -66,7 +102,7 @@
         },
         "prompts": [
             {
-                "id": "Elicit.Slot.904082647228.343239949849",
+                "id": "PostTweetElicitSlot",
                 "variations": [
                     {
                         "type": "PlainText",
@@ -79,7 +115,7 @@
                 ]
             },
             {
-                "id": "Confirm.Slot.904082647228.343239949849",
+                "id": "PostTweetConfirmSlot",
                 "variations": [
                     {
                         "type": "PlainText",
@@ -88,6 +124,19 @@
                     {
                         "type": "PlainText",
                         "value": "Is {text} ok?"
+                    }
+                ]
+            },
+            {
+                "id": "GetTimelineElicitSlot",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How many tweets do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "How many tweets should I read?"
                     }
                 ]
             }

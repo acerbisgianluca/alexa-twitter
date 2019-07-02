@@ -19,6 +19,14 @@
             "content": "Get top 5 World trends."
         }
     },
+    "getTimeline": {
+        "success": "{count, plural, =0 {You have no tweets} =1 {Here is a tweet} other {Here are # tweets}} <break strength='medium'/> {tweetList}",
+        "tweet": "{text} <break strength='medium'/> posted by {user}",
+        "error": "Now I can't retrieve your timeline. Please, try again later.",
+        "card": {
+            "content": "Ottieni la tua timeline."
+        }
+    },
     "help": {
         "message": "If you want to post a tweet, you can say <break strength='medium'/> post <break strength='weak'/> and what you would like to publish. If you want to browse global trends, you can ask <break strength='medium'/> what are global trends? So, what would you like to do?",
         "card": {

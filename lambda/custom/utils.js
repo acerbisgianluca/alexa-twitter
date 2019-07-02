@@ -1,5 +1,7 @@
 const Twitter = require('twitter');
 const { ri } = require('@jargon/alexa-skill-sdk');
+const regexCreator = require('emoji-regex');
+const emojiRegex = regexCreator();
 const CONSUMER_KEY = process.env.CONSUMER_KEY;
 const CONSUMER_SECRET = process.env.CONSUMER_SECRET;
 
@@ -54,7 +56,44 @@ const getTrends = async ([accessToken, accessTokenSecret]) => {
         });
 };
 
+const getTimeline = async ([accessToken, accessTokenSecret], jrm, count) => {
+    const client = login(accessToken, accessTokenSecret);
+
+    const params = {
+        count: count < 1 ? 1 : count,
+        exclude_replies: true,
+    };
+    return client
+        .get('statuses/home_timeline', params)
+        .then(async (results) => {
+            const tweetList = results.map((tweet) => {
+                const newText = tweet.text
+                    .replace(
+                        /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/g,
+                        ''
+                    )
+                    .replace(emojiRegex, '');
+
+                return ri('getTimeline.tweet', {
+                    text: newText,
+                    user: tweet.user.name,
+                });
+            });
+
+            const tweetString = await jrm.renderBatch(tweetList);
+
+            return ri('getTimeline.success', {
+                count: count,
+                tweetList: tweetString.join(' <break strength=\'medium\'/> '),
+            });
+        })
+        .catch(() => {
+            return ri('getTimeline.error');
+        });
+};
+
 module.exports = {
     postTweet,
     getTrends,
+    getTimeline,
 };

@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        let tokens =
+        const tokens =
             handlerInput.requestEnvelope.context.System.user.accessToken;
         if (!tokens) {
             const speechText = ri('errors.noAuth');
@@ -38,7 +38,7 @@ const PostTweetIntentHandler = {
         );
     },
     async handle(handlerInput) {
-        let tokens =
+        const tokens =
             handlerInput.requestEnvelope.context.System.user.accessToken;
         if (!tokens) {
             const speechText = ri('errors.noAuth');
@@ -70,7 +70,7 @@ const GetTrendsIntentHandler = {
         );
     },
     async handle(handlerInput) {
-        let tokens =
+        const tokens =
             handlerInput.requestEnvelope.context.System.user.accessToken;
         if (!tokens) {
             const speechText = ri('errors.noAuth');
@@ -86,6 +86,41 @@ const GetTrendsIntentHandler = {
         return handlerInput.jrb
             .speak(speechText)
             .withSimpleCard(ri('card.title'), ri('getTrends.card.content'))
+            .getResponse();
+    },
+};
+
+const GetTimelineIntentHandler = {
+    canHandle(handlerInput) {
+        return (
+            handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+            handlerInput.requestEnvelope.request.intent.name ===
+                'GetTimelineIntent'
+        );
+    },
+    async handle(handlerInput) {
+        const tokens =
+            handlerInput.requestEnvelope.context.System.user.accessToken;
+        if (!tokens) {
+            const speechText = ri('errors.noAuth');
+
+            return handlerInput.jrb
+                .speak(speechText)
+                .withLinkAccountCard()
+                .getResponse();
+        }
+
+        const count =
+            handlerInput.requestEnvelope.request.intent.slots.count.value;
+        const speechText = await utils.getTimeline(
+            tokens.split(','),
+            handlerInput.jrm,
+            count
+        );
+
+        return handlerInput.jrb
+            .speak(speechText)
+            .withSimpleCard(ri('card.title'), ri('getTimeline.card.content'))
             .getResponse();
     },
 };
@@ -165,6 +200,7 @@ exports.handler = skillBuilder
         LaunchRequestHandler,
         PostTweetIntentHandler,
         GetTrendsIntentHandler,
+        GetTimelineIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler
