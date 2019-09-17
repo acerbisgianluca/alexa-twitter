@@ -7,6 +7,7 @@
     },
     "postTweet": {
         "success": "Your tweet has been posted!",
+        "header": "Posted tweet",
         "error": "Now I can't post your tweet. Please, try again later.",
         "card": {
             "content": "Post a new Tweet."
